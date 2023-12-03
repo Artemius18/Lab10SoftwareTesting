@@ -46,7 +46,7 @@ namespace Tests
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             IWebElement TextButton = wait.Until(driver => driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/header/button[1]")));
-            Assert.That(TextButton.Text.ToString(), Is.EqualTo("Explore Premium"), "Сайт не переведен на английский");
+            Assert.That(TextButton.Text, Is.EqualTo("Explore Premium"), "Сайт не переведен на английский");
         }
 
         [TearDown]

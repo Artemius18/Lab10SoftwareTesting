@@ -43,20 +43,21 @@ namespace LanguageChangeTest.Tests
             HomePage homePage = new HomePage(driver);
             homePage.OpenPage();
             homePage.CloseObstructingTab("//*[@id=\"main\"]/div/div[2]/div[1]/nav/div[2]/div[1]/div[3]/div/button");
+            homePage.AddSong();
+            Assert.IsTrue(homePage.isSongInPlaylist(), "Песни нет в плейлисте!");
         }
 
         [TearDown]
         public void TearDown()
         {
-            try
-            {
-                driver.Quit();
-                var cookies = driver.Manage().Cookies.AllCookies;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
+            //try
+            //{
+            //    driver.Quit();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Error: " + ex.Message);
+            //}
         }
     }
 }

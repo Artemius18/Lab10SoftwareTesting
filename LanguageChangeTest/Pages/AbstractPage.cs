@@ -44,5 +44,10 @@ namespace LanguageChangeTest.Pages
             element.SendKeys(sedkeysText);
         }
         
+        public bool FindElement(By locator)
+        {
+            IWebElement element = driver.FindElement(locator);
+            return element != null;
+        }
     }
 }

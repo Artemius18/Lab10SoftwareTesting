@@ -32,8 +32,8 @@ namespace LanguageChangeTest.Pages
 
         public void isLanguageChanged()
         {
-            IWebElement TextButton = driver.FindElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/header/button[1]"));
-            Assert.That(TextButton.Text, Is.EqualTo("Explore Premium"), "Error: language isn't changed!");
+            IWebElement TextButton = driver.FindElement(By.XPath("/html/body/div[4]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/div[1]/div[2]/h2"));
+            Assert.That(TextButton.Text, Is.EqualTo("Language"), "Error: language isn't changed!");
         }
     }
 }

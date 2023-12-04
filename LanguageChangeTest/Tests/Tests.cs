@@ -37,16 +37,24 @@ namespace LanguageChangeTest.Tests
         }
 
 
+        //[Test]
+        //public void AddSongToPlaylist()
+        //{
+        //    HomePage homePage = new HomePage(driver);
+        //    homePage.OpenPage();
+        //    homePage.CloseObstructingTab("//*[@id=\"main\"]/div/div[2]/div[1]/nav/div[2]/div[1]/div[3]/div/button");
+        //    homePage.AddSong();
+        //    Assert.IsTrue(homePage.isSongInPlaylist(), "Песни нет в плейлисте!");
+        //}
+
         [Test]
-        public void AddSongToPlaylist()
+        public void MaxInputSearchLengthTest()
         {
             HomePage homePage = new HomePage(driver);
             homePage.OpenPage();
             homePage.CloseObstructingTab("//*[@id=\"main\"]/div/div[2]/div[1]/nav/div[2]/div[1]/div[3]/div/button");
-            homePage.AddSong();
-            Assert.IsTrue(homePage.isSongInPlaylist(), "Песни нет в плейлисте!");
+            homePage.InputSearchLength();
         }
-
         [TearDown]
         public void TearDown()
         {

@@ -57,9 +57,23 @@ namespace LanguageChangeTest.Pages
             //return false;
         }
 
-        public void DeleteSong()
+        public void InputSearchLength()
         {
+            string actualStr = "\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"";
+            ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[1]/nav/div[1]/ul/li[2]"));
+            ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/header/div[3]/div/div/form/input"), actualStr);
 
+            int searchStr = GetSearchInputLength(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/header/div[3]/div/div/form/input"));
+
+            Assert.Greater(actualStr.Length, searchStr, $"Actual length is {actualStr.Length}. Max input length is " + searchStr);
+            Assert.Less(actualStr.Length, searchStr, $"Actual length is {actualStr.Length}. Max input length is " + searchStr);
         }
+        public int GetSearchInputLength(By locator)
+        {
+            IWebElement searchInput = driver.FindElement(locator);
+            string inputValue = searchInput.GetAttribute("value");
+            return inputValue.Length;
+        }
+
     }
 }

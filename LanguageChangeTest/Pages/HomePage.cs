@@ -30,7 +30,7 @@ namespace LanguageChangeTest.Pages
 
             ////*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div
             //клик по первому треку в плейлисте
-            ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]"));
+            ClickElement(By.CssSelector("#main > div > div.ZQftYELq0aOsg6tPbVbV > div.jEMA2gVoLgPQqAFrPhFw > div.main-view-container > div.os-host.os-host-foreign.os-theme-spotify.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden.main-view-container__scroll-node.os-host-transition.os-host-overflow.os-host-overflow-y > div.os-padding > div > div > div.main-view-container__scroll-node-child > main > section > div > div.BL__GuO2JsHMR6RgNfwY > div.contentSpacing > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div:nth-child(1) > div"));
 
             
             //клик по блоку с найденной песней

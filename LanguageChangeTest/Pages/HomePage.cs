@@ -27,10 +27,12 @@ namespace LanguageChangeTest.Pages
             //клик по плейлисту
             ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[1]/nav/div[2]/div[1]/div[2]/div[4]/div/div/div/div[2]/ul/div/div[2]/li[3]/div/div[1]"));
 
+
+            ////*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div
             //клик по первому треку в плейлисте
-            ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div"));
+            ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]"));
 
-
+            
             //клик по блоку с найденной песней
             ClickElement(By.XPath("//*[@id=\"main\"]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/main/section/div/div[2]/div[3]/div[1]/div/div/div/div/div[2]/div[1]/div"));
 

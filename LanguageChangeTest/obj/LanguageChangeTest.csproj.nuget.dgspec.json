@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[4.4.2, )"
             },
+            "NodaTime": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.15.0, )"
